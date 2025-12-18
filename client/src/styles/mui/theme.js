@@ -1,66 +1,114 @@
-const { createTheme } = require("@mui/material")
+const { createTheme, responsiveFontSizes } = require("@mui/material/styles");
 
-//Color Variables
-const backgroundColour = "#DAF5FF"
-const primaryColour = "#34344A"
-const secondaryColour = "#87F6FF"
-const textColor = "#007EA7"
-const highlightColor = "#AFAAB9"
+// Colour Variables
+const backgroundColour = "#F3F8F2";
+const primaryColour = "#FCB07E";
+const textColour = "#242423";
+const secondaryColour = "#8B95C9";
+const highlightColour = "#EC058E";
 
-const backgroundColourDark = "#007EA7"
-const primaryColourDark = "#AFAAB9"
-const secondaryColourDark = "#34344A"
-const textColorDark = "#DAF5FF"
-const highlightColorDark = "#87F6FF"
+// Dark Theme Colour Variables
+const backgroundColourDark = "#242423";
+const primaryColourDark = "#83502eff";
+const textColourDark = "#F3F8F2";
+const secondaryColourDark = "#3c4469ff";
+const highlightColourDark = "#EC058E";
 
-//theme
-let theme = createTheme({
-    palette : {
-        mode : "light",
-        background : {
-           default: backgroundColour
-        },
-        primary: {
-            main: primaryColour
-        },
-        secondary: {
-            main: secondaryColour
-        },
-        tertiary: {
-            main: highlightColor
-        },
-        icon: {
-            main: textColor
-        },
-        error: {
-            main: "#be2222ff"
-        },
+// Theme
+let lightTheme = createTheme({
+  palette: {
+    mode: "light",
+    background: {
+      default: backgroundColour,
+      paper: backgroundColour
     },
+    primary: {
+      main: primaryColour,
+    },
+    secondary: {
+      main: secondaryColour,
+    },
+    tertiary: {
+      main: highlightColour,
+    },
+    icon: {
+      main: textColour,
+    },
+    error: {
+      main: "#D80027",
+    },
+  },
+  typography: {
+    h1: {
+      fontFamily: 'Montserrat',
+    },
+    fontFamily: 'Montserrat',
+    body1: {
+      fontFamily: 'Raleway',
+    },
+    body2: {
+      fontFamily: 'Raleway',
+    },
+    subtitle1: {
+      fontFamily: 'Raleway',
+    },
+    subtitle2: {
+      fontFamily: 'Raleway',
+    },
+    button: {
+      fontWeight: 500,
+    },
+  },
 });
 
-let darktheme = createTheme({
-    palette : {
-        mode : "dark",
-        background : {
-           default: backgroundColourDark
-        },
-        primary: {
-            main: primaryColourDark
-        },
-        secondary: {
-            main: secondaryColourDark
-        },
-        tertiary: {
-            main: highlightColorDark
-        },
-        icon: {
-            main: textColorDark
-        },
-        error: {
-            main: "#be2222ff"
-        },
+// Dark Theme
+let darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+    background: {
+      default: backgroundColourDark,
     },
+    primary: {
+      main: primaryColourDark,
+      
+    },
+    secondary: {
+      main: secondaryColourDark,
+    },
+    tertiary: {
+      main: highlightColourDark,
+    },
+    icon: {
+      main: textColourDark,
+    },
+    error: {
+      main: "#D80027",
+    },
+  },
+  typography: {
+    h1: {
+      fontFamily: 'Montserrat',
+    },
+    fontFamily: 'Montserrat',
+    body1: {
+      fontFamily: 'Raleway',
+    },
+    body2: {
+      fontFamily: 'Raleway',
+    },
+    subtitle1: {
+      fontFamily: 'Raleway',
+    },
+    subtitle2: {
+      fontFamily: 'Raleway',
+    },
+    button: {
+      fontWeight: 500,
+    },
+  },
 });
 
-export {darktheme};
-export { theme };
+lightTheme = responsiveFontSizes(lightTheme);
+darkTheme = responsiveFontSizes(darkTheme);
+
+export { lightTheme, darkTheme };
