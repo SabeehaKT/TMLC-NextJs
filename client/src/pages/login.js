@@ -6,7 +6,7 @@ import { getActiveTheme, selectTheme } from "@/redux/reducers/themeReducer";
 import { useEffect } from "react";
 import { lightTheme, darkTheme } from "@/styles/mui/theme";
 
-import Login from "../components/common/Login";
+import Login from "../Components/Common/Login";
 import MyAppBar from "../Components/Common/MyAppBar";
 
 export default function LoginPage() {

@@ -8,7 +8,7 @@ const cookies = new Cookies();
 const Login = () => {
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
-  const [showOtp, setShowOtp] = useState(true);
+  const [showOtp, setShowOtp] = useState(false);
 
   const sendOtp = async () => {
     console.log(email);

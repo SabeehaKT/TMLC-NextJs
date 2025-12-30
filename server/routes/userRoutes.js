@@ -50,7 +50,7 @@ module.exports = (app) => {
       if (!users) {
         return res.status(400).json({ message: "There are no users." });
       }
-
+ 
       res.status(201).json({ message: "Users: ", users });
     } catch (error) {
       console.log(error);
